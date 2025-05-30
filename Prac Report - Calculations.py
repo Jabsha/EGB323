@@ -42,7 +42,7 @@ def get_dynamic_viscosity(T):
     return A*10**(B/(T+273.15-C))
 
 
-## Inital Values
+## Initial Values
 diameter_m = diameter_mm*0.001
 flow_rate_m3s = flow_rate_lmin*(10**-3)/60
 cross_section_area_m2 = np.zeros((n))
@@ -72,7 +72,7 @@ for i in range(n):
         haaland_headloss_Pa[i,j] = density_kgm3[i,j]*g*haaland_headloss_m[i,j]
 
 
-# ## Moddy approach
+# ## Moody approach
 relative_pipe_roughness = np.zeros(n)
 for i in range(n):
     relative_pipe_roughness[i] = pipe_roughness_m[i]/diameter_m[i]
